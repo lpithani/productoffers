@@ -67,28 +67,28 @@ function App() {
     }))
   }
   function buttonClicked(event){
-    if(offers.length){
+    //if(offers.length){
       console.log("Button:", {
         product,
         offers,
       });
-      setOffers([])
-    }
-    else
-      setOffers([
-      {
-        id:1,
-        name: 'offer1',
-        checked: true
-      },{
-        id:2,
-        name: 'offer2',
-        checked: false
-      },{
-        id:3,
-        name: 'offer3',
-        checked: false
-      }])
+    //   setOffers([])
+    // }
+    // else
+    //   setOffers([
+    //   {
+    //     id:1,
+    //     name: 'offer1',
+    //     checked: true
+    //   },{
+    //     id:2,
+    //     name: 'offer2',
+    //     checked: false
+    //   },{
+    //     id:3,
+    //     name: 'offer3',
+    //     checked: false
+    //   }])
   }
   return (
     <Card className={classes.root}>
