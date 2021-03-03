@@ -52,6 +52,10 @@ function App() {
       id:2,
       name: 'offer2',
       checked: false
+    },{
+      id:3,
+      name: 'offer3',
+      checked: false
     }]);
   function handleCheck(event) {
     // console.log(event.target.name,':',event.target.checked);
@@ -63,10 +67,28 @@ function App() {
     }))
   }
   function buttonClicked(event){
-    console.log("Button:", {
-      product,
-      offers,
-    });
+    if(offers.length){
+      console.log("Button:", {
+        product,
+        offers,
+      });
+      setOffers([])
+    }
+    else
+      setOffers([
+      {
+        id:1,
+        name: 'offer1',
+        checked: true
+      },{
+        id:2,
+        name: 'offer2',
+        checked: false
+      },{
+        id:3,
+        name: 'offer3',
+        checked: false
+      }])
   }
   return (
     <Card className={classes.root}>
@@ -100,12 +122,11 @@ function App() {
           ))}
         </CardContent>
         <CardActions>
-          <Button variant="contained" color="secondary" onClick={buttonClicked}>
-            Primary
+          <Button variant="contained" color="primary" onClick={buttonClicked}>
+            Add to Cart
           </Button>
         </CardActions>
       </div>
-      
     </Card>
   );
 }
